@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  anxinbao
+
+  Created by 郭大扬 on 2019/2/15.
+  Copyright © 2019年 郭大扬. All rights reserved.
+*/
+"NSBluetoothPeripheralUsageDescription"="Turn Bluetooth on for \"Nice Care Smart\" to locate the transmission hub and connect it to the internet, so data can be displayed on \"Nice Care Smart\".";
+
+"NSMicrophoneUsageDescription"="你是否同意使用你的麦克风";
+"NSPhotoLibraryUsageDescription""你是否同意使用你的相册";"
+"NSCameraUsageDescription"="你是否同意使用你的摄像头";

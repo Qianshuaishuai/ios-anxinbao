@@ -1,0 +1,63 @@
+//
+//  PrefixHeader.pch
+//  WFRecScreenDemo
+//
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AppDelegate.h"
+#import "ZFToast.h"
+#import "BaseViewController.h"
+#import "HelpHeaderFile.h"
+#import "Utils.h"
+
+#define ScreenBounds  [[UIScreen mainScreen]bounds]
+#define KWidth  [[UIScreen mainScreen]bounds].size.width
+#define KHeight  [[UIScreen mainScreen]bounds].size.height
+#define viewWidth self.view.frame.size.width
+#define viewHeight self.view.frame.size.height
+#define contentViewWidth self.contentView.frame.size.width
+#define contentViewHeight self.contentView.frame.size.height
+#define screenScale [[UIScreen mainScreen] scale]
+#define mywidth(o) o.bounds.size.width
+#define myheight(o) o.bounds.size.height
+#define centerx(o,w) (o.bounds.size.width-w)/2
+#define centery(o,w) (o.bounds.size.height-w)/2
+#define myx(o) o.frame.origin.x
+#define myy(o) o.frame.origin.y
+
+#define DLOG(format, ...)                   \
+NSLog(@"\n%s:%d\n%@",               \
+__PRETTY_FUNCTION__, __LINE__,      \
+[NSString stringWithFormat:format, ## __VA_ARGS__])
+
+#define _po(o) DLOG(@"%@", (o))
+#define _pn(o) DLOG(@"%d", (o))
+#define _pf(o) DLOG(@"%f", (o))
+#define _ps(o) DLOG(@"CGSize: {%.0f, %.0f}", (o).width, (o).height)
+#define _pr(o) DLOG(@"NSRect: {{%.0f, %.0f}, {%.0f, %.0f}}", (o).origin.x, (o).origin.y, (o).size.width, (o).size.height)
+#define _point(o) DLOG(@"CGPoint: {%.0f, %.0f}", (o).x, (o).y)
+
+#define DOBJ(obj)  DLOG(@"%s: %@", #obj, [(obj) description])
+
+#define MARK    NSLog(@"\nMARK: %s, %d", __PRETTY_FUNCTION__, __LINE__)
+
+// 获得RGB颜色
+#define KSetColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define KSetColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define KSetString(str) NSLocalizedString(str, nil)
+#define MainColor [UIColor colorWithRed:(62)/255.0 green:(166)/255.0 blue:(233)/255.0 alpha:1.0]
+#define ASLocalizedString(key)  [NSString stringWithFormat:@"%@", [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"appLanguage"]] ofType:@"lproj"]] localizedStringForKey:(key) value:nil table:@"ASLocalized"]] 
+#endif
+
+
+#endif /* PrefixHeader_pch */

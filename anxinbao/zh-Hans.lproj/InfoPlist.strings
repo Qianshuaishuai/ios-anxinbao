@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  anxinbao
+
+  Created by 郭大扬 on 2019/2/15.
+  Copyright © 2019年 郭大扬. All rights reserved.
+*/
+"NSBluetoothPeripheralUsageDescription"="开启蓝牙以允許“Nice Care Smart”寻找传感器并将其连接到互联网，让数据在\"Nice Care Smart\" 上显示。";
+"NSMicrophoneUsageDescription"="你是否同意使用你的麦克风";
+"NSPhotoLibraryUsageDescription""你是否同意使用你的相册";"
+"NSCameraUsageDescription"="你是否同意使用你的摄像头";

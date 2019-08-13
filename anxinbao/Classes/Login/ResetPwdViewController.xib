@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResetPwdViewController">
+            <connections>
+                <outlet property="nextBtn" destination="shf-Jn-I3b" id="u8u-1O-wbp"/>
+                <outlet property="passwordTxt" destination="EtZ-zQ-hTH" id="ZRA-DY-Fqn"/>
+                <outlet property="passwordbg" destination="EpD-Pb-SUs" id="fTw-gj-Ki0"/>
+                <outlet property="rePasswordTxt" destination="HYe-o3-Dc9" id="AyR-OI-Oo9"/>
+                <outlet property="repasswordbg" destination="jDu-WT-iU9" id="FeW-YX-9u3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDu-WT-iU9" userLabel="re">
+                    <rect key="frame" x="40" y="95" width="295" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-o3-Dc9">
+                            <rect key="frame" x="10" y="0.0" width="285" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="HYe-o3-Dc9" secondAttribute="trailing" id="78e-YG-3U6"/>
+                        <constraint firstAttribute="bottom" secondItem="HYe-o3-Dc9" secondAttribute="bottom" id="TUi-MP-Ggx"/>
+                        <constraint firstItem="HYe-o3-Dc9" firstAttribute="leading" secondItem="jDu-WT-iU9" secondAttribute="leading" constant="10" id="cfG-qh-VrE"/>
+                        <constraint firstItem="HYe-o3-Dc9" firstAttribute="top" secondItem="jDu-WT-iU9" secondAttribute="top" id="kgd-g3-O60"/>
+                        <constraint firstAttribute="height" constant="50" id="q0I-u5-M9m"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shf-Jn-I3b">
+                    <rect key="frame" x="40" y="567" width="295" height="50"/>
+                    <color key="backgroundColor" red="0.1843137255" green="0.67450980390000004" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="DxN-HB-gyj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="下一步">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EpD-Pb-SUs">
+                    <rect key="frame" x="40" y="30" width="295" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EtZ-zQ-hTH">
+                            <rect key="frame" x="10" y="0.0" width="275" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="ffj-8E-ZJq"/>
+                            </constraints>
+                            <mutableString key="placeholder">请输入密码0. -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   </mutableString>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="EtZ-zQ-hTH" firstAttribute="leading" secondItem="EpD-Pb-SUs" secondAttribute="leading" constant="10" id="1hx-BA-jTC"/>
+                        <constraint firstAttribute="bottom" secondItem="EtZ-zQ-hTH" secondAttribute="bottom" id="5gM-Db-vXs"/>
+                        <constraint firstItem="EtZ-zQ-hTH" firstAttribute="top" secondItem="EpD-Pb-SUs" secondAttribute="top" id="GER-ir-Epg"/>
+                        <constraint firstAttribute="trailing" secondItem="EtZ-zQ-hTH" secondAttribute="trailing" constant="10" id="rGj-7i-Pib"/>
+                        <constraint firstAttribute="height" constant="50" id="x2Q-cN-VXh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="EpD-Pb-SUs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="CqH-W3-XtY"/>
+                <constraint firstAttribute="bottom" secondItem="shf-Jn-I3b" secondAttribute="bottom" constant="50" id="DLW-Lt-kwT"/>
+                <constraint firstItem="EpD-Pb-SUs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="VPv-2T-sUr"/>
+                <constraint firstItem="shf-Jn-I3b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="Xnw-E7-6mv"/>
+                <constraint firstAttribute="trailing" secondItem="shf-Jn-I3b" secondAttribute="trailing" constant="40" id="bLf-8X-5Zs"/>
+                <constraint firstItem="jDu-WT-iU9" firstAttribute="top" secondItem="EpD-Pb-SUs" secondAttribute="bottom" constant="15" id="fhB-NF-4JG"/>
+                <constraint firstAttribute="trailing" secondItem="EpD-Pb-SUs" secondAttribute="trailing" constant="40" id="gvO-Iw-za1"/>
+                <constraint firstAttribute="trailing" secondItem="jDu-WT-iU9" secondAttribute="trailing" constant="40" id="hzA-Eb-r3w"/>
+                <constraint firstItem="jDu-WT-iU9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="vLm-oj-BfG"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

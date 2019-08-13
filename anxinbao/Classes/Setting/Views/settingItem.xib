@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SettingItem">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWc-kK-WoC">
+                    <rect key="frame" x="0.0" y="0.0" width="365" height="60"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="8ZG-Ds-gLn">
+                            <rect key="frame" x="348" y="23" width="9" height="14"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="报警音乐设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="947-Dx-Cpn">
+                            <rect key="frame" x="20" y="19" width="104" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="06K-fW-twi"/>
+                        <constraint firstAttribute="trailing" secondItem="8ZG-Ds-gLn" secondAttribute="trailing" constant="10" id="Xls-9l-Hrj"/>
+                        <constraint firstItem="947-Dx-Cpn" firstAttribute="centerY" secondItem="OWc-kK-WoC" secondAttribute="centerY" id="h7c-pS-wgI"/>
+                        <constraint firstItem="947-Dx-Cpn" firstAttribute="leading" secondItem="OWc-kK-WoC" secondAttribute="leading" constant="20" id="ikc-vP-liI"/>
+                        <constraint firstItem="8ZG-Ds-gLn" firstAttribute="centerY" secondItem="OWc-kK-WoC" secondAttribute="centerY" id="ppo-fd-D0O"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OWc-kK-WoC" secondAttribute="trailing" constant="10" id="9eK-ff-c4O"/>
+                <constraint firstItem="OWc-kK-WoC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PEi-ra-cLN"/>
+                <constraint firstItem="OWc-kK-WoC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TJ7-25-h4X"/>
+            </constraints>
+            <connections>
+                <outlet property="title" destination="947-Dx-Cpn" id="2L7-Is-DRN"/>
+            </connections>
+            <point key="canvasLocation" x="31.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow" width="9" height="14"/>
+    </resources>
+</document>

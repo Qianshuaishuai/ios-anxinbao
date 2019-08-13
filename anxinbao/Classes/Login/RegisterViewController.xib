@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
+            <connections>
+                <outlet property="code" destination="Yar-no-Cnw" id="NZJ-Ld-g5M"/>
+                <outlet property="codebg" destination="yIv-Lo-Jma" id="pyI-36-Ka5"/>
+                <outlet property="getCode" destination="AjF-ua-o6Y" id="OmJ-uj-EiL"/>
+                <outlet property="nextBtn" destination="hKu-ss-iyX" id="Qtz-QC-Aki"/>
+                <outlet property="phone" destination="IwA-H7-kaC" id="emU-41-wSO"/>
+                <outlet property="phonebg" destination="pft-TZ-vjD" id="cDa-Ly-rbA"/>
+                <outlet property="view" destination="iN0-l3-epB" id="WDk-N0-6wz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pft-TZ-vjD">
+                    <rect key="frame" x="40" y="30" width="295" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IwA-H7-kaC">
+                            <rect key="frame" x="10" y="0.0" width="185" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjF-ua-o6Y">
+                            <rect key="frame" x="205" y="10" width="80" height="30"/>
+                            <color key="backgroundColor" red="0.97254901960784312" green="0.7803921568627451" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="Kzd-8a-Z48"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="获取验证码">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IwA-H7-kaC" secondAttribute="trailing" constant="100" id="6Xu-ha-6GT"/>
+                        <constraint firstItem="IwA-H7-kaC" firstAttribute="top" secondItem="pft-TZ-vjD" secondAttribute="top" id="Bhj-l2-YVC"/>
+                        <constraint firstAttribute="height" constant="50" id="C6g-0S-0EG"/>
+                        <constraint firstItem="AjF-ua-o6Y" firstAttribute="top" secondItem="pft-TZ-vjD" secondAttribute="top" constant="10" id="F5Z-5B-Sq1"/>
+                        <constraint firstAttribute="trailing" secondItem="AjF-ua-o6Y" secondAttribute="trailing" constant="10" id="Iwo-jH-7sA"/>
+                        <constraint firstAttribute="bottom" secondItem="IwA-H7-kaC" secondAttribute="bottom" id="LnY-zO-0th"/>
+                        <constraint firstItem="IwA-H7-kaC" firstAttribute="leading" secondItem="pft-TZ-vjD" secondAttribute="leading" constant="10" id="oze-qm-VlY"/>
+                        <constraint firstAttribute="bottom" secondItem="AjF-ua-o6Y" secondAttribute="bottom" constant="10" id="qsC-SL-8kf"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIv-Lo-Jma">
+                    <rect key="frame" x="40" y="95" width="295" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yar-no-Cnw">
+                            <rect key="frame" x="10" y="0.0" width="285" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Yar-no-Cnw" firstAttribute="leading" secondItem="yIv-Lo-Jma" secondAttribute="leading" constant="10" id="NFu-ht-Wmh"/>
+                        <constraint firstItem="Yar-no-Cnw" firstAttribute="top" secondItem="yIv-Lo-Jma" secondAttribute="top" id="Tqn-fT-jaI"/>
+                        <constraint firstAttribute="trailing" secondItem="Yar-no-Cnw" secondAttribute="trailing" id="gCA-0v-56e"/>
+                        <constraint firstAttribute="height" constant="50" id="pRb-nH-SM5"/>
+                        <constraint firstAttribute="bottom" secondItem="Yar-no-Cnw" secondAttribute="bottom" id="uLK-Oe-9Oh"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKu-ss-iyX">
+                    <rect key="frame" x="40" y="712" width="295" height="50"/>
+                    <color key="backgroundColor" red="0.1843137255" green="0.67450980390000004" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="xn9-Px-ig2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="下一步">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yIv-Lo-Jma" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="3W3-hh-OQK"/>
+                <constraint firstAttribute="trailing" secondItem="hKu-ss-iyX" secondAttribute="trailing" constant="40" id="F7I-yj-Sf9"/>
+                <constraint firstItem="hKu-ss-iyX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="SZo-Zq-XRo"/>
+                <constraint firstAttribute="trailing" secondItem="yIv-Lo-Jma" secondAttribute="trailing" constant="40" id="fJI-RR-iPD"/>
+                <constraint firstAttribute="bottom" secondItem="hKu-ss-iyX" secondAttribute="bottom" constant="50" id="fxy-60-yOa"/>
+                <constraint firstItem="yIv-Lo-Jma" firstAttribute="top" secondItem="pft-TZ-vjD" secondAttribute="bottom" constant="15" id="nTv-5h-0Y4"/>
+                <constraint firstItem="hKu-ss-iyX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="npu-Yb-SSp"/>
+                <constraint firstAttribute="trailing" secondItem="hKu-ss-iyX" secondAttribute="trailing" constant="40" id="o44-vT-nnm"/>
+                <constraint firstItem="pft-TZ-vjD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="sbk-1r-n8R"/>
+                <constraint firstAttribute="trailing" secondItem="pft-TZ-vjD" secondAttribute="trailing" constant="40" id="vNk-aZ-XJ1"/>
+                <constraint firstItem="pft-TZ-vjD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="xat-5N-Z4s"/>
+            </constraints>
+            <point key="canvasLocation" x="31.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

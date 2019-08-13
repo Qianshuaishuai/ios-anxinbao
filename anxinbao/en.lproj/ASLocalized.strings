@@ -1,0 +1,179 @@
+/*
+ Utils.m
+ */
+"尿量报警"="Wetness Alarm";
+"静止报警"="Inactivity Alarm";
+"跌倒报警"="Fall Alarm";
+"紧急报警"="Emergency Alarm";
+"查看详情"="See Details";
+
+/*
+ ZFToast.h
+ */
+"提示文字"="提示文字";
+
+/*
+ ManageController.m
+ */
+"全部"="All";
+"待处理"="Pending";
+"紧急"="Urgent";
+"周边"="Surrounding";
+"暂无数据"="No data";
+"开始扫描，请耐心等待……"="Scanning……";
+"下拉刷新"="下拉刷新";
+"上拉加载更多"="上拉加載更多";
+"请输入姓名"="Name";
+"筛选"="Filter";
+
+/*
+ NotifyViewController.m
+ */
+"待处理事项"="Pending items";
+
+/*
+ EVNTabBarController.m
+ */
+"列表"="List";
+"设置"="Setting";
+
+/*
+ RecommendViewController.m
+ */
+"尿量"="Urine volume";
+"用片量(片)"="Diaper Consumption (pcs)";
+"片"="pcs";
+"月"="Month";
+"周"="Week";
+"日"="Day";
+
+"延时"="Lapse";
+
+/*
+ DetailViewController.m
+ */
+"记录详情"="Details";
+"请输入备注内容，可留空"="Leave a comment (optional)";
+"尿量达到报警值，请及时处理"="Wetness alarm. Please handle it in time.";
+"用户静止时间超过设定的翻身报警延时限值，请及时处理"="User has been inactive more than the inactive lapse time. Please handle in time.";
+"用户跌倒，请及时处理"="The user has fallen. Please handle immediately.";
+"发生紧急情况，请及时处理"="Emergency alarm. Please handle immediately.";
+"处理人：%@\n备注：%@"="Handle man：%@\nremark：%@";
+
+/*
+ PersonController.m
+ */
+"基本信息"="Info";
+"记录"="Records";
+"统计"="Statistics";
+"绑定成功"="Bind successful";
+"编号"="No.";
+"房间"="Room";
+"床位"="Bed";
+"感应器电量"="Battery";
+
+/*
+ BaseInfoController.m
+ */
+"周边温度"="Temperature";
+"睡姿"="Posture";
+"静止时间"="Resting";
+"跌倒\n持续时间"="Fallen time lapse";
+"紧急呼唤\n持续时间"="Emergency\nTime lapse";
+"尿湿"="Diaper wetness";
+"紫色"="紫色";
+
+/*
+ MusicViewController.m
+ */
+"报警音乐设置"="Alarm setting";
+"报警时间设置"="Alert duration setting";
+"修改密码"="Change password";
+"网络设置"="Network Setting";
+"铃声 %ld"="Music %ld";
+
+/*
+ TimeViewController.m
+ */
+"编辑"="Edit";
+"保存"="Save";
+
+/*
+ LanguageViewController.m
+ */
+"语言设置"="Language Setting";
+"繁体中文"="繁體中文";
+
+/*
+ WifiConnViewController.m
+ */
+"请输入Wifi密码"="Enter Wi-Fi password";
+"请输入Wifi名称"="Enter Wi-Fi name";
+"记住密码"="Remember password";
+"立即连接"="Connect";
+"设备2"="Device2";
+
+/*
+ SettingViewController.m
+ */
+"退出登录"="Logout";
+
+/*
+ LoginViewController.m
+ */
+"请输入账户号码"="Email";
+"请输入账户密码"="Password";
+"忘记密码"="Forget password";
+"用户名或密码不对"="Email or password is wrong";
+"这里打印请求成功要做的事"="這裏打印請求成功要做的事";
+"这里打印请求失败要做的事"="這裏打印請求失敗要做的事";
+"登录"="Login";
+
+/*
+ ResetPwdViewController.m
+ */
+"重置密码"="Reset password";
+"请输入密码"="Enter new password";
+"请再次输入密码"="Confirm new password";
+"两次输入密码不匹配"="The passwords does not match";
+"请求失败"="Request fail";
+"重设密码成功"="Reset password successful";
+
+/*
+ FindPwdViewController.m
+ */
+"获取验证码"="Get code";
+"请输入邮箱"="Email";
+"发送验证码成功"="The validation code has been sent.  Please check your email.";
+"请输入验证码"="Code";
+
+/*
+ ResetViewController.m
+ */
+"请输入原密码"="Enter original password";
+"请输入原密码"="Enter original password";
+"修改密码成功"="Save password successful";
+
+"下一步"="Next";
+/*
+ AppDelegate.m
+ */
+"确定"="Save";
+
+"没有发现蓝牙信号"="No Bluetooth signal found.";
+
+"温馨提示"="Warning";
+"手机蓝牙未开启，请开启手机蓝牙再进行配置操作"="Mobile Bluetooth is not on, please turn on the mobile Bluetooth and configure the operation. ";
+"该传感器已经被使用中，是否继续绑定操作？"="The sensor is already in use. Do you want to continue the binding operation?";
+"继续"="Continue";
+"取消"="Cancel";
+
+"位置："="Place：";
+"连接失败"="Connect fail!";
+"Wifi设置失败"="Wifi setting failed!";
+"Wifi设置成功"="Wi-Fi Connected";
+"位置设置成功"="Location set-up successful";
+"提交"="Submit";
+"请输入位置"="Please enter place";
+
+
