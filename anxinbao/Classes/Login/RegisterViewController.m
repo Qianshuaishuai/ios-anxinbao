@@ -24,11 +24,14 @@ static int const tick = 60;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=ASLocalizedString(@"注册");
-    self.nextBtn.layer.cornerRadius=4;
-    self.codebg.layer.cornerRadius=self.phonebg.layer.cornerRadius=4;
+    self.nextBtn.layer.cornerRadius=25;
+    self.codebg.layer.cornerRadius=25;
+    self.phonebg.layer.cornerRadius=25;
+    self.getCode.layer.cornerRadius=12;
+    self.getCode.backgroundColor=UIColorFromRGB(0x0B99F4);
+    self.nextBtn.backgroundColor=UIColorFromRGB(0x0B99F4);
     self.view.backgroundColor=BGCOLOR;
     [self.nextBtn addTarget:self action:@selector(resetPwd) forControlEvents:UIControlEventTouchUpInside];
-    self.getCode.layer.cornerRadius=2;
     [self.getCode addTarget:self action:@selector(getPhoneCode) forControlEvents:UIControlEventTouchUpInside];
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
@@ -68,7 +71,7 @@ static int const tick = 60;
         getCodeEnable=YES;
         _getCode.titleLabel.text = ASLocalizedString(@"获取验证码");
         [self.getCode setTitle:ASLocalizedString(@"获取验证码")forState:UIControlStateNormal];
-        self.getCode.backgroundColor=UIColorFromRGB(0xF8C75B);
+        self.getCode.backgroundColor=UIColorFromRGB(0x0B99F4);
         [self.getCode setTitleColor:UIColorFromRGB(0xffffff) forState:UIControlStateNormal];
     }else{
         _countDown -=1;

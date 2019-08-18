@@ -21,7 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    nextBtn.layer.cornerRadius=4;
+    nextBtn.layer.cornerRadius=25;
+    nextBtn.backgroundColor = UIColorFromRGB(0x0B99F4);
+    nextBtn.backgroundColor=UIColorFromRGB(0x0B99F4);
     [nextBtn addTarget:self action:@selector(done) forControlEvents:UIControlEventTouchUpInside];
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     self.title=ASLocalizedString(@"重置密码");
@@ -32,8 +34,8 @@
     passwordTxt.returnKeyType = UIReturnKeyNext;
     rePasswordTxt.returnKeyType = UIReturnKeyDone;
     rePasswordTxt.delegate = passwordTxt.delegate=self;
-    self.passwordbg.layer.cornerRadius=4.0;
-    self.repasswordbg.layer.cornerRadius=4.0;
+    self.passwordbg.layer.cornerRadius=25;
+    self.repasswordbg.layer.cornerRadius=25;
     [passwordTxt setSecureTextEntry:YES];
     [rePasswordTxt setSecureTextEntry:YES];
     self.view.backgroundColor=BGCOLOR;

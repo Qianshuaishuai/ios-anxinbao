@@ -22,7 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=ASLocalizedString(@"修改密码");
-    self.nextBtn.layer.cornerRadius=4;
+    self.nextBtn.layer.cornerRadius=25;
+    self.nextBtn.backgroundColor=UIColorFromRGB(0x0B99F4);
     self.view.backgroundColor=BGCOLOR;
     [self.nextBtn addTarget:self action:@selector(done) forControlEvents:UIControlEventTouchUpInside];
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
@@ -33,8 +34,9 @@
     oldPasswordTxt.returnKeyType = self.password.returnKeyType = UIReturnKeyNext;
     self.repassword.returnKeyType = UIReturnKeyDone;
     oldPasswordTxt.delegate = self.password.delegate=self.repassword.delegate=self;
-    self.passwordbg.layer.cornerRadius=4.0;
-    self.repassword.layer.cornerRadius=4.0;
+    self.passwordbg.layer.cornerRadius=25;
+    self.repwdbg.layer.cornerRadius=25;
+    self.oldpwdbg.layer.cornerRadius=25;
     [oldPasswordTxt setSecureTextEntry:YES];
     [_password setSecureTextEntry:YES];
     [_repassword setSecureTextEntry:YES];

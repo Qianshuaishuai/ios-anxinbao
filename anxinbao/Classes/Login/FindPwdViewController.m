@@ -24,11 +24,15 @@ static int const tick = 60;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=ASLocalizedString(@"忘记密码");
-    self.nextBtn.layer.cornerRadius=4;
-    self.codebg.layer.cornerRadius=self.phonebg.layer.cornerRadius=4;
+    self.nextBtn.layer.cornerRadius=25;
+    self.codebg.layer.cornerRadius=25;
+    self.phonebg.layer.cornerRadius=25;
+    self.getCode.layer.cornerRadius=12;
+    self.getCode.backgroundColor=UIColorFromRGB(0x0B99F4);
+    self.nextBtn.backgroundColor=UIColorFromRGB(0x0B99F4);
     self.view.backgroundColor=BGCOLOR;
     [self.nextBtn addTarget:self action:@selector(resetPwd) forControlEvents:UIControlEventTouchUpInside];
-    self.getCode.layer.cornerRadius=2;
+
     [self.getCode addTarget:self action:@selector(getPhoneCode) forControlEvents:UIControlEventTouchUpInside];
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。

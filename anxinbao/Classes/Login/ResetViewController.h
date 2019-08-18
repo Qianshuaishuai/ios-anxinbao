@@ -12,6 +12,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *password;
 @property (strong, nonatomic) IBOutlet UIView *passwordbg;
 @property (strong, nonatomic) IBOutlet UIView *repwdbg;
+@property (strong, nonatomic) IBOutlet UIView *oldpwdbg;
 @property (strong, nonatomic) IBOutlet UITextField *repassword;
 @property (strong, nonatomic) IBOutlet UIButton *nextBtn;
 
