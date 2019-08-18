@@ -5,7 +5,7 @@
 //  Created by developer on 2016/12/30.
 //  Copyright © 2016年 郭大扬. All rights reserved.
 //
-
+#import "MJRefresh.h"
 #import "ManageController.h"
 #import "HelpHeaderFile.h"
 #import "CategoryView.h"
@@ -19,7 +19,7 @@
 #import "DetailViewController.h"
 #import "DropDown.h"
 #import "BabyCentralManager.h"
-#import "MJRefresh.h"
+
 #define popup_width 317
 
 static NSString *ID = @"hostCollectionViewCell";
@@ -218,6 +218,7 @@ static NSString *ID = @"hostCollectionViewCell";
 }
 
 -(void)selectItem:(int)index{
+    arr=[NSArray arrayWithObjects:ASLocalizedString(@"全部"),ASLocalizedString(@"待处理"),ASLocalizedString(@"紧急"),ASLocalizedString(@"周边"),nil];
     NSString* text=arr[index];
     NSArray* types=[NSArray arrayWithObjects:@"wait",@"urgent",@"near",nil];
     if(index==0){

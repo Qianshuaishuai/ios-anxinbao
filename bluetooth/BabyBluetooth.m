@@ -279,63 +279,63 @@
 #pragma mark - 链式函数
 //查找Peripherals
 - (BabyBluetooth *(^)()) scanForPeripherals {
-    return ^BabyBluetooth *() {
+    return [^BabyBluetooth *() {
         [babyCentralManager->pocket setObject:@"YES" forKey:@"needScanForPeripherals"];
         return self;
-    };
+    } copy];
 }
 
 //连接Peripherals
 - (BabyBluetooth *(^)()) connectToPeripherals {
-    return ^BabyBluetooth *() {
+    return [^BabyBluetooth *() {
         [babyCentralManager->pocket setObject:@"YES" forKey:@"needConnectPeripheral"];
         return self;
-    };
+    } copy];
 }
 
 //发现Services
 - (BabyBluetooth *(^)()) discoverServices {
-    return ^BabyBluetooth *() {
+    return [^BabyBluetooth *() {
         [babyCentralManager->pocket setObject:@"YES" forKey:@"needDiscoverServices"];
         return self;
-    };
+    } copy];
 }
 
 //获取Characteristics
 - (BabyBluetooth *(^)()) discoverCharacteristics {
-    return ^BabyBluetooth *() {
+    return [^BabyBluetooth *() {
         [babyCentralManager->pocket setObject:@"YES" forKey:@"needDiscoverCharacteristics"];
         return self;
-    };
+    } copy];
 }
 
 //更新Characteristics的值
 - (BabyBluetooth *(^)()) readValueForCharacteristic {
-    return ^BabyBluetooth *() {
+    return [^BabyBluetooth *() {
         [babyCentralManager->pocket setObject:@"YES" forKey:@"needReadValueForCharacteristic"];
         return self;
-    };
+    } copy];
 }
 
 //设置查找到Descriptors名称的block
 - (BabyBluetooth *(^)()) discoverDescriptorsForCharacteristic {
-    return ^BabyBluetooth *() {
+    return [^BabyBluetooth *() {
         [babyCentralManager->pocket setObject:@"YES" forKey:@"needDiscoverDescriptorsForCharacteristic"];
         return self;
-    };
+    } copy];
 }
 
 //设置读取到Descriptors值的block
 - (BabyBluetooth *(^)()) readValueForDescriptors {
-    return ^BabyBluetooth *() {
+    return [^BabyBluetooth *() {
         [babyCentralManager->pocket setObject:@"YES" forKey:@"needReadValueForDescriptors"];
         return self;
-    };
+    } copy];
 }
 
 //开始并执行
 - (BabyBluetooth *(^)()) begin {
-    return ^BabyBluetooth *() {
+    return [^BabyBluetooth *() {
         //取消未执行的stop定时任务
         [timerForStop invalidate];
         dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -375,7 +375,7 @@
             [self start:cachedPeripheral];
         });
         return self;
-    };
+    } copy];
 }
 
 
@@ -413,7 +413,7 @@
 //sec秒后停止
 - (BabyBluetooth *(^)(int sec)) stop {
     
-    return ^BabyBluetooth *(int sec) {
+    return [^BabyBluetooth *(int sec) {
         BabyLog(@">>> stop in %d sec",sec);
         
         //听见定时器执行babyStop
@@ -422,7 +422,7 @@
         [[NSRunLoop currentRunLoop] addTimer:timerForStop forMode:NSRunLoopCommonModes];
         
         return self;
-    };
+    } copy];
 }
 
 //私有方法，停止扫描和断开连接，清空pocket
@@ -449,20 +449,20 @@
 
 //持有对象
 - (BabyBluetooth *(^)(id obj)) having {
-    return ^(id obj) {
+    return [^(id obj) {
         [babyCentralManager->pocket setObject:obj forKey:NSStringFromClass([obj class])];
         return self;
-    };
+    } copy];
 }
 
 
 //切换委托频道
 - (BabyBluetooth *(^)(NSString *channel)) channel {
-    return ^BabyBluetooth *(NSString *channel) {
+    return [^BabyBluetooth *(NSString *channel) {
         //先缓存数据，到begin方法统一处理
         [babyCentralManager->pocket setValue:channel forKey:@"channel"];
         return self;
-    };
+    } copy];
 }
 
 - (void)validateProcess {
@@ -525,11 +525,11 @@
 }
 
 - (BabyBluetooth *(^)()) enjoy {
-    return ^BabyBluetooth *(int sec) {
+    return [^BabyBluetooth *(int sec) {
         self.connectToPeripherals().discoverServices().discoverCharacteristics()
         .readValueForCharacteristic().discoverDescriptorsForCharacteristic().readValueForDescriptors().begin();
         return self;
-    };
+    } copy];
 }
 
 #pragma mark - 工具方法
@@ -551,7 +551,7 @@
     [babySpeaker switchChannel:[babyCentralManager->pocket valueForKey:@"channel"]];
     babyCentralManager->pocket = [[NSMutableDictionary alloc]init];
     
-    return ^(CBPeripheral *peripheral,CBCharacteristic *characteristic) {
+    return [^(CBPeripheral *peripheral,CBCharacteristic *characteristic) {
         //判断连接状态
         if (peripheral.state == CBPeripheralStateConnected) {
             self->babyCentralManager->oneReadValueForDescriptors = YES;
@@ -563,7 +563,7 @@
         }
         
         return self;
-    };
+    } copy];
 }
 
 - (void)notify:(CBPeripheral *)peripheral
@@ -630,15 +630,15 @@ characteristic:(CBCharacteristic *)characteristic
 }
 
 - (BabyPeripheralManager *(^)()) bePeripheral {
-    return ^BabyPeripheralManager* () {
+    return [^BabyPeripheralManager* () {
         return babyPeripheralManager;
-    };
+    } copy];
 }
 - (BabyPeripheralManager *(^)(NSString *localName)) bePeripheralWithName {
-    return ^BabyPeripheralManager* (NSString *localName) {
+    return [^BabyPeripheralManager* (NSString *localName) {
         babyPeripheralManager.localName = localName;
         return babyPeripheralManager;
-    };
+    } copy];
 }
 
 - (void)peripheralModelBlockOnPeripheralManagerDidUpdateState:(void(^)(CBPeripheralManager *peripheral))block {

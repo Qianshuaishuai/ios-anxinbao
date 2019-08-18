@@ -60,7 +60,7 @@
     self.password.returnKeyType = UIReturnKeyDone;
     self.account.delegate=self;
     self.password.delegate=self;
-    [self.forgetPwd addTarget:self action:@selector(goForget) forControlEvents:UIControlEventTouchUpInside];
+    [self.forgetPwd addTarget:self action:@selector(goRegister) forControlEvents:UIControlEventTouchUpInside];
     [forgettip setText:ASLocalizedString(@"忘记密码")];
     [self.login setTitle:ASLocalizedString(@"登录") forState:UIControlStateNormal];
     UIButton* bg=[UIButton buttonWithType:UIButtonTypeCustom];

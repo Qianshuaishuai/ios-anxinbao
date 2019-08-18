@@ -45,11 +45,13 @@
         [[NSUserDefaults standardUserDefaults] setObject:@"en" forKey:appLanguage];
     }
     mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
      email = [[NSUserDefaults standardUserDefaults] objectForKey:@"email"];
     password = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
     session_id = [[NSUserDefaults standardUserDefaults] objectForKey:@"session_id"];
     if(email!=nil&&password!=nil){
         [self relogin];
+//        [self toLogin];
     }
     else{
         [self toLogin];
@@ -57,16 +59,17 @@
     array = @[@"music1",@"music2",@"music3",@"music4",@"music5",@"music6"];
     //[self.window startLaunchForRootController:loginVC];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
-    //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标
-    entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionSound|UMessageAuthorizationOptionAlert;
-    [UNUserNotificationCenter currentNotificationCenter].delegate=self;
-    [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity     completionHandler:^(BOOL granted, NSError * _Nullable error) {
-        if (granted) {
-        }else{
-        }
-    }];
-    //[UMessage s:UMENG_APPKEY launchOptions:launchOptions httpsEnable:YES]; 
+    // Push组件基本功能配置
+//    UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
+//    //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标
+//    entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionSound|UMessageAuthorizationOptionAlert;
+//    [UNUserNotificationCenter currentNotificationCenter].delegate=self;
+//    [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity     completionHandler:^(BOOL granted, NSError * _Nullable error) {
+//        if (granted) {
+//        }else{
+//        }
+//    }];
+    //[UMessage s:UMENG_APPKEY launchOptions:launchOptions httpsEnable:YES];
     self.data=nil;
     //[self performSelector:@selector(testNotify) withObject:nil afterDelay:10];
     //[self showPopupTest];
@@ -81,7 +84,7 @@
 
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-    [UMessage registerDeviceToken:deviceToken];
+//    [UMessage registerDeviceToken:deviceToken];
 
     NSLog(@"===didRegisterForRemoteNotificationsWithDeviceToken===");
     
@@ -435,7 +438,9 @@
 }
 
 
--(void)getDataFullUrl:(NSString*)URL param:(NSMutableDictionary*)dict callback:(MSG_CALLBACK_FUNC)callback{
+-(void)getDataFullUrl:(NSString*)URL param:(NSMutableDictionary*)dict
+    callback:(MSG_CALLBACK_FUNC)callback{
+    session_id = [[NSUserDefaults standardUserDefaults] objectForKey:@"session_id"];
     if(session_id!=nil){
         [dict setObject:session_id forKey:@"session_id"];
     }
@@ -485,6 +490,8 @@
 #pragma mark - 页面跳转及入口跳转方法
 - (void)dealEnterToDCFTabbar:(NSString *)toWhere
 {
+    mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
     if ([toWhere isEqualToString:ASLocalizedString(@"忘记密码")])
     {
         UIViewController* c = [mainSB instantiateViewControllerWithIdentifier:@"forgetController"];

@@ -26,7 +26,7 @@
 
 
 - (BabyPeripheralManager *(^)())startAdvertising {
-    return ^BabyPeripheralManager *() {
+    return [^BabyPeripheralManager *(){
         
         if ([self canStartAdvertising]) {
             PERIPHERAL_MANAGER_INIT_WAIT_TIMES = 0;
@@ -64,14 +64,14 @@
         }
         
         return self;
-    };
+    } copy];
 }
 
 - (BabyPeripheralManager *(^)())stopAdvertising {
-    return ^BabyPeripheralManager*() {
+    return [^BabyPeripheralManager*() {
         [_peripheralManager stopAdvertising];
         return self;
-    };
+    } copy];
 }
 
 - (BOOL)canStartAdvertising {
@@ -92,26 +92,26 @@
 }
 
 - (BabyPeripheralManager *(^)(NSArray *array))addServices {
-    return ^BabyPeripheralManager*(NSArray *array) {
+    return [^BabyPeripheralManager*(NSArray *array) {
         _services = [NSMutableArray arrayWithArray:array];
         [self addServicesToPeripheral];
         return self;
-    };
+    } copy];
 }
 
 - (BabyPeripheralManager *(^)())removeAllServices {
-    return ^BabyPeripheralManager*() {
+    return [^BabyPeripheralManager*() {
         didAddServices = 0;
         [_peripheralManager removeAllServices];
         return self;
-    };
+    } copy];
 }
 
 - (BabyPeripheralManager *(^)(NSData *data))addManufacturerData {
-    return ^BabyPeripheralManager*(NSData *data) {
+    return [^BabyPeripheralManager*(NSData *data) {
         _manufacturerData = data;
         return self;
-    };
+    } copy];
 }
 
 - (void)addServicesToPeripheral {
