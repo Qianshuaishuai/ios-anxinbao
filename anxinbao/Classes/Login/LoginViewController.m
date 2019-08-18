@@ -43,9 +43,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     appDel = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    self.accountWrap.layer.cornerRadius=4;
-    self.passwordWrap.layer.cornerRadius=4;
-    self.login.layer.cornerRadius=4;
+    self.accountWrap.layer.cornerRadius=25;
+    self.passwordWrap.layer.cornerRadius=25;
+    self.login.layer.cornerRadius=25;
+    self.gegister.layer.cornerRadius=25;
+    self.gegister.backgroundColor=UIColorFromRGB(0xf0f0f0);
+    [self.gegister.layer setBorderColor:[UIColor colorWithRed:11.0/255 green:153.0/255 blue:244.0/255 alpha:1.0].CGColor];
+    [self.gegister.layer setBorderWidth:1.0];
     self.account.placeholder=ASLocalizedString(@"请输入账户号码");
     self.password.placeholder=ASLocalizedString(@"请输入账户密码");
     [self.account setValue:UIColorFromRGB(0xd8d8d8) forKeyPath:@"_placeholderLabel.textColor"];   //修改
@@ -54,42 +58,45 @@
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
     tapGestureRecognizer.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapGestureRecognizer];
+    self.view.backgroundColor=UIColorFromRGB(0xf0f0f0);
     [self.login addTarget:self action:@selector(loginin) forControlEvents:UIControlEventTouchUpInside];
+    [self.gegister addTarget:self action:@selector(goRegister) forControlEvents:UIControlEventTouchUpInside];
     //将触摸事件添加到当前view
     self.account.returnKeyType = UIReturnKeyNext;
     self.password.returnKeyType = UIReturnKeyDone;
     self.account.delegate=self;
     self.password.delegate=self;
-    [self.forgetPwd addTarget:self action:@selector(goRegister) forControlEvents:UIControlEventTouchUpInside];
+    [self.forgetPwd addTarget:self action:@selector(goForget) forControlEvents:UIControlEventTouchUpInside];
     [forgettip setText:ASLocalizedString(@"忘记密码")];
     [self.login setTitle:ASLocalizedString(@"登录") forState:UIControlStateNormal];
-    UIButton* bg=[UIButton buttonWithType:UIButtonTypeCustom];
-    bg.frame=CGRectMake(MainScreenWidth-120, 50, 100, 23.5);
-    [bg setBackgroundImage:[Utils getResizingImage:[UIImage imageNamed:@"dropdown"]] forState:UIControlStateNormal];
-    [self.view addSubview:bg];
-    UILabel* title=[[UILabel alloc] initWithFrame:CGRectMake(MainScreenWidth-120, 50, 80, 23.5)];
-    title.font=[UIFont systemFontOfSize:14];
-    title.textColor=UIColorFromRGB(0x999999);
-    title.textAlignment=NSTextAlignmentCenter;
-    [title setText:@"English"];
-    [self.view addSubview:title];
-    [bg addTarget:self action:@selector(showDropDown) forControlEvents:UIControlEventTouchUpInside];
-    NSArray *arr=[NSArray arrayWithObjects:@"繁體中文",@"English",@"简体中文",nil];
-    dropdown=[[DropDown alloc] initWithFrame:CGRectMake(bg.frame.origin.x-2, bg.frame.origin.y+bg.frame.size.height, bg.frame.size.width, 80) withStringArray:arr];
-    dropdown.delegate=self;
-    dropdown.hidden=YES;
-    [self.view addSubview:dropdown];
-    NSString* lang=[[NSUserDefaults standardUserDefaults] objectForKey:appLanguage];
-    if([lang isEqualToString:@"zh-Hant"]){
-        title.text=@"繁體中文";
-        [dropdown selectIndex:0];
-    }else if([lang isEqualToString:@"en"]){
-        title.text=@"English";
-        [dropdown selectIndex:1];
-    }else{
-        title.text=@"简体中文";
-        [dropdown selectIndex:2];
-    }
+    [self.gegister setTitle:ASLocalizedString(@"注册") forState:UIControlStateNormal];
+//    UIButton* bg=[UIButton buttonWithType:UIButtonTypeCustom];
+//    bg.frame=CGRectMake(MainScreenWidth-120, 50, 100, 23.5);
+//    [bg setBackgroundImage:[Utils getResizingImage:[UIImage imageNamed:@"dropdown"]] forState:UIControlStateNormal];
+//    [self.view addSubview:bg];
+//    UILabel* title=[[UILabel alloc] initWithFrame:CGRectMake(MainScreenWidth-120, 50, 80, 23.5)];
+//    title.font=[UIFont systemFontOfSize:14];
+//    title.textColor=UIColorFromRGB(0x999999);
+//    title.textAlignment=NSTextAlignmentCenter;
+//    [title setText:@"English"];
+//    [self.view addSubview:title];
+//    [bg addTarget:self action:@selector(showDropDown) forControlEvents:UIControlEventTouchUpInside];
+//    NSArray *arr=[NSArray arrayWithObjects:@"繁體中文",@"English",@"简体中文",nil];
+//    dropdown=[[DropDown alloc] initWithFrame:CGRectMake(bg.frame.origin.x-2, bg.frame.origin.y+bg.frame.size.height, bg.frame.size.width, 80) withStringArray:arr];
+//    dropdown.delegate=self;
+//    dropdown.hidden=YES;
+//    [self.view addSubview:dropdown];
+//    NSString* lang=[[NSUserDefaults standardUserDefaults] objectForKey:appLanguage];
+//    if([lang isEqualToString:@"zh-Hant"]){
+//        title.text=@"繁體中文";
+//        [dropdown selectIndex:0];
+//    }else if([lang isEqualToString:@"en"]){
+//        title.text=@"English";
+//        [dropdown selectIndex:1];
+//    }else{
+//        title.text=@"简体中文";
+//        [dropdown selectIndex:2];
+//    }
 }
 
 -(void)showDropDown{

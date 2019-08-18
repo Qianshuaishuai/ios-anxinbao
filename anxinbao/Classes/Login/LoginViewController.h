@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *account;
 @property (strong, nonatomic) IBOutlet UIButton *login;
 @property (strong, nonatomic) IBOutlet UIButton *forgetPwd;
+@property (strong, nonatomic) IBOutlet UIButton *gegister;
 @property (strong, nonatomic) IBOutlet UITextField *password;
 
 @end

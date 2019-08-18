@@ -121,13 +121,14 @@
 /*
  LoginViewController.m
  */
-"请输入账户号码"="Email";
-"请输入账户密码"="Password";
+"请输入账户号码"="Please enter number";
+"请输入账户密码"="Please enter password";
 "忘记密码"="Forget password";
 "用户名或密码不对"="Email or password is wrong";
 "这里打印请求成功要做的事"="這裏打印請求成功要做的事";
 "这里打印请求失败要做的事"="這裏打印請求失敗要做的事";
-"登录"="Login";
+"登录"="Sign in";
+"注册"="Sign up";
 
 /*
  ResetPwdViewController.m
