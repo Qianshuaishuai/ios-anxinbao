@@ -58,7 +58,8 @@
 
     self.navigationItem.hidesBackButton = true;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
-    self.navigationItem.leftBarButtonItem.tintColor=UIColorFromRGB(0xffffff);
+    self.navigationItem.leftBarButtonItem.tintColor=UIColorFromRGB(0x000000);
+
     self.backBtn=self.navigationItem.leftBarButtonItem;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showPopup:) name:@"msg" object:nil];
     if(appDel.data!=nil){

@@ -72,7 +72,7 @@ static int const tick = 60;
         getCodeEnable=YES;
         _getCode.titleLabel.text = ASLocalizedString(@"获取验证码");
         [self.getCode setTitle:ASLocalizedString(@"获取验证码")forState:UIControlStateNormal];
-        self.getCode.backgroundColor=UIColorFromRGB(0xF8C75B);
+        self.getCode.backgroundColor=UIColorFromRGB(0x0B99F4);
         [self.getCode setTitleColor:UIColorFromRGB(0xffffff) forState:UIControlStateNormal];
     }else{
         _countDown -=1;

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -47,7 +47,7 @@
                             <rect key="frame" x="225" y="0.0" width="150" height="86"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ja-ZM-Tyg">
-                                    <rect key="frame" x="110.5" y="31" width="24.5" height="24"/>
+                                    <rect key="frame" x="110.5" y="31" width="24.5" height="24.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="24.5" id="Cb6-vV-QSI"/>
                                         <constraint firstAttribute="height" constant="24.5" id="u2I-3i-oxA"/>
@@ -56,13 +56,13 @@
                                     <state key="highlighted" image="plushigh"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHY-H1-8Zi">
-                                    <rect key="frame" x="79.5" y="32" width="21" height="21"/>
+                                    <rect key="frame" x="79.5" y="32.5" width="21" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOy-SP-FTM">
-                                    <rect key="frame" x="45" y="31" width="24.5" height="24"/>
+                                    <rect key="frame" x="45" y="31" width="24.5" height="24.5"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24.5" id="8HU-7c-QOS"/>
                                         <constraint firstAttribute="width" constant="24.5" id="xma-sX-ldg"/>
@@ -161,9 +161,9 @@
     </objects>
     <resources>
         <image name="avatar" width="46" height="46"/>
-        <image name="minus" width="24" height="24"/>
-        <image name="minushigh" width="24" height="24"/>
-        <image name="plus" width="24" height="24"/>
-        <image name="plushigh" width="24" height="24"/>
+        <image name="minus" width="24.5" height="24.5"/>
+        <image name="minushigh" width="24.5" height="24.5"/>
+        <image name="plus" width="24.5" height="24.5"/>
+        <image name="plushigh" width="24.5" height="24.5"/>
     </resources>
 </document>

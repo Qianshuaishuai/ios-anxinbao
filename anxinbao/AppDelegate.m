@@ -58,7 +58,7 @@
     }
     array = @[@"music1",@"music2",@"music3",@"music4",@"music5",@"music6"];
     //[self.window startLaunchForRootController:loginVC];
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     // Push组件基本功能配置
 //    UMessageRegisterEntity * entity = [[UMessageRegisterEntity alloc] init];
 //    //type是对推送的几个参数的选择，可以选择一个或者多个。默认是三个全部打开，即：声音，弹窗，角标
@@ -119,7 +119,7 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSString *URL=[NSString stringWithFormat:@"%@logout", HOST];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    
+    session_id = [[NSUserDefaults standardUserDefaults] objectForKey:@"session_id"];
     NSDictionary *parameters = @{@"session_id":session_id,@"lang":[self getLang]};
     
     [manager POST:URL parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {

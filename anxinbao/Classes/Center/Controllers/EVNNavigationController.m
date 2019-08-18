@@ -22,7 +22,7 @@
     UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedIn:self, nil ];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 //    dic[NSFontAttributeName] = [UIFont systemFontOfSize:16];
-    dic[NSForegroundColorAttributeName] = UIColorFromRGB(0xffffff);
+    dic[NSForegroundColorAttributeName] = UIColorFromRGB(0x000000);
     [item setTitleTextAttributes:dic forState:UIControlStateNormal];
 
     // appearanceWhenContainedInInstancesOfClasses的含义就是让UINavigationBar在EVNNavigationController表现为某种特性
@@ -32,10 +32,11 @@
     dicBar[NSFontAttributeName] = [UIFont systemFontOfSize:16];
     [navBar setTitleTextAttributes:dic];
     navBar.translucent=NO;
-    [navBar setBackgroundImage:[Utils createImageWithColor:UIColorFromRGB(0x2facae)] forBarMetrics:UIBarMetricsDefault];
+    [navBar setBackgroundImage:[Utils createImageWithColor:UIColorFromRGB(0xffffff)] forBarMetrics:UIBarMetricsDefault];
     navBar.shadowImage = [[UIImage alloc] init];
 //
-    [navBar setBarTintColor:ThemeColor];                                 // 设置导航条背景颜色
+    [navBar setBarTintColor:ThemeColor];
+    // 设置导航条背景颜色
     // [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
 
 //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
