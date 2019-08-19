@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,14 +19,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mBa-LD-JP1">
-                            <rect key="frame" x="15" y="16.5" width="27" height="27"/>
+                            <rect key="frame" x="18" y="18.5" width="23" height="23"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="27" id="FJQ-Lx-5aE"/>
-                                <constraint firstAttribute="width" constant="27" id="JWM-Zo-sXB"/>
+                                <constraint firstAttribute="height" constant="23" id="FJQ-Lx-5aE"/>
+                                <constraint firstAttribute="width" constant="23" id="JWM-Zo-sXB"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音乐一" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7v-F7-40D">
-                            <rect key="frame" x="54" y="19.5" width="52" height="21"/>
+                            <rect key="frame" x="56" y="19.5" width="52" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -35,10 +35,10 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="6t8-jj-lyI"/>
-                        <constraint firstItem="A7v-F7-40D" firstAttribute="leading" secondItem="mBa-LD-JP1" secondAttribute="trailing" constant="12" id="97f-e2-znj"/>
+                        <constraint firstItem="A7v-F7-40D" firstAttribute="leading" secondItem="mBa-LD-JP1" secondAttribute="trailing" constant="15" id="97f-e2-znj"/>
                         <constraint firstItem="mBa-LD-JP1" firstAttribute="centerY" secondItem="vcm-ZK-K75" secondAttribute="centerY" id="9Z3-Hv-mpK"/>
                         <constraint firstItem="A7v-F7-40D" firstAttribute="centerY" secondItem="vcm-ZK-K75" secondAttribute="centerY" id="cnp-Qh-ljx"/>
-                        <constraint firstItem="mBa-LD-JP1" firstAttribute="leading" secondItem="vcm-ZK-K75" secondAttribute="leading" constant="15" id="xBu-4g-YgR"/>
+                        <constraint firstItem="mBa-LD-JP1" firstAttribute="leading" secondItem="vcm-ZK-K75" secondAttribute="leading" constant="18" id="xBu-4g-YgR"/>
                     </constraints>
                 </view>
             </subviews>

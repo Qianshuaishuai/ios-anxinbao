@@ -77,13 +77,13 @@ static NSString *ID = @"hostCollectionViewCell";
     list=[[NSMutableArray alloc] init];
     appDel = (AppDelegate *)[UIApplication sharedApplication].delegate;
     UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, 50)];
-    view.backgroundColor=UIColorFromRGB(0x2facae);
+    view.backgroundColor=UIColorFromRGB(0xffffff);
     [self.view addSubview:view];
     self.searchField=[[UITextField alloc] initWithFrame:CGRectMake(15, 8, MainScreenWidth - 62.5, 35)];
     [view addSubview:self.searchField];
-    self.searchField.backgroundColor=UIColorFromRGB(0x6ec5c6);
-    self.searchField.layer.cornerRadius=4.0f;
-    self.searchField.textColor=UIColorFromRGB(0xffffff);
+    self.searchField.backgroundColor=UIColorFromRGB(0xf0f0f0);
+    self.searchField.layer.cornerRadius=16.0f;
+    self.searchField.textColor=UIColorFromRGB(0x9A9A9A);
     self.searchField.placeholder = ASLocalizedString(@"请输入姓名");
     [self.searchField setValue:self.searchField.textColor forKeyPath:@"_placeholderLabel.textColor"];   //修改
     [self.searchField setValue:[UIFont boldSystemFontOfSize:15] forKeyPath:@"_placeholderLabel.font"];
@@ -104,7 +104,7 @@ static NSString *ID = @"hostCollectionViewCell";
     [search setImage:[UIImage imageNamed:@"search.png"] forState:UIControlStateNormal];       // 修改输入框右端图片Bookmark的图标
     [view addSubview:search];
     [search addTarget:self action:@selector(searchNames) forControlEvents:UIControlEventTouchDown];
-    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 0)];
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 0)];
     
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(MainScreenWidth - 42, 10, 42, 40);
